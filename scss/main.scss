@@ -1,0 +1,362 @@
+// scss-docs-start color-variables
+$green: #003d2a;
+// scss-docs-end color-variables
+
+// scss-docs-start gray-color-variables
+$gray-300: #eaedf5;
+$gray-800: #2d2d2d;
+$gray-900: #1a1a1a;
+// scss-docs-end gray-color-variables
+
+// scss-docs-start-color-variables
+$purple: #986987;
+$indigo: #96a3cf;
+$teal: #50cfc1;
+$orange: #fccbac;
+
+$green-300: #e3edec;
+$green-400: #aacac7;
+$green-500: #5f877b;
+$green-600: #53857f;
+$green-700: #397266;
+$green-800: #7f8954;
+$green-900: #003d2a;
+// scss-docs-end-color-variables
+
+// scss-docs-start theme-color-variables
+$primary: $teal;
+$secondary: $orange;
+// scss-docs-end theme-color-variables
+
+// scss-docs-start border-radius-variables
+$border-radius: 0;
+// scss-docs-end border-radius-variables
+
+// scss-docs-start nav-variables
+$navbar-nav-link-padding-x: 2rem;
+// scss-docs-end nav-variables
+
+// scss-docs-start navbar-theme-variables
+$navbar-light-color: $gray-900;
+// scss-docs-end navbar-theme-variables
+
+// scss-docs-start btn-variables
+$btn-padding-x: 1.75rem;
+// scss-docs-end btn-variables
+
+// scss-docs-start list-group-variables
+$list-group-bg: transparent;
+// scss-docs-end list-group-variables
+
+// Spacing
+//
+// scss-docs-start spacer-variables-maps
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.75,
+  5: $spacer * 3.622,
+);
+// scss-docs-end spacer-variables-maps
+
+// Position
+//
+// Define the edge positioning anchors of the position utilities.
+
+// scss-docs-start position-map
+$position-values: (
+  0: 0,
+  50: 50%,
+  60: -110px,
+  100: 100%,
+);
+// scss-docs-end position-map
+
+// Typography
+//
+// scss-docs-start font-variables
+$font-family-sans-serif: "Syntax LT Std", sans-serif;
+
+$font-size-base: 1rem;
+$h1-font-size: $font-size-base * 3.125;
+$h2-font-size: $font-size-base * 2.1875;
+$h3-font-size: $font-size-base * 1.5625;
+$h4-font-size: $font-size-base * 1.375;
+$h5-font-size: $font-size-base * 1.125;
+$h6-font-size: $font-size-base * 1.0625;
+// scss-docs-end font-variables
+
+// Keep this import at the bottom of this file.
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+header {
+  height: 90vh;
+  background-image: url(/img/Hero-Image.jpg);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.header-container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-box {
+  width: 137px;
+  height: 150px;
+  background: $green-700;
+}
+
+// Explore Section
+
+.card-img-overlay {
+  width: fit-content;
+}
+
+// Navigation
+
+.navbar-top li a,
+.navbar-secondary li a {
+  color: $gray-900;
+}
+
+.navbar-top li a:hover,
+.navbar-secondary li a:hover {
+  color: $gray-900;
+  text-decoration: underline;
+  text-decoration-color: $teal;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.5rem;
+}
+
+.navbar-secondary li a:hover {
+  color: $gray-900;
+  text-decoration: underline;
+  text-decoration-color: white;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.5rem;
+}
+
+.navbar-custom {
+  background-color: $green-400;
+}
+
+.nav-spacer {
+  // flex-grow: 1;
+  width: 150px;
+  padding: 0;
+  background-color: transparent;
+}
+
+.mobile-logo {
+  display: contents;
+}
+
+// Header
+.arrow-box {
+  background-color: $green-900;
+
+  .arrow-header {
+    background-color: $green-700;
+  }
+}
+
+// What's On Section
+
+.whats-on,
+.things-to-do {
+  background-color: $gray-300;
+
+  .list-group-item a:hover {
+    border-bottom: 3px solid $primary;
+  }
+
+  .arrow:hover::before {
+    content: url(/img/arrow-vector-right-small.svg);
+    position: absolute;
+    left: -50px;
+    top: 2px;
+  }
+}
+
+.list-group-item {
+  border: 0;
+  padding: 0;
+
+  a {
+    font-size: 1.875rem;
+  }
+}
+
+.footprint-right-section-one {
+  top: 390px;
+  left: 140px;
+}
+
+.footprint-left-section-one {
+  right: 600px;
+  bottom: 50px;
+}
+
+// Places To Go Section
+
+.glide {
+  a {
+    text-decoration: none;
+    color: $gray-900;
+  }
+}
+
+.glide__slide:hover > a {
+  text-decoration: underline;
+  text-decoration-color: $teal;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.5rem;
+}
+
+.slide-img {
+  height: 350px;
+  width: auto;
+}
+
+.slide-title {
+  margin-top: 0.5rem;
+}
+
+.glide__arrow--left,
+.glide__arrow--right {
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  background-color: $orange;
+  border: 0;
+  img {
+    width: 22px;
+    height: 22px;
+  }
+
+  :hover {
+    opacity: 0.4;
+  }
+
+  :focus {
+    border: 1px solid $teal;
+  }
+}
+
+.glide__arrow--left {
+  left: -8%;
+}
+
+.glide__arrow--right {
+  right: -8%;
+}
+
+.slider__btn--right img {
+  margin-left: 0.4rem;
+}
+
+.slider__btn--left img {
+  margin-right: 0.2rem;
+}
+
+// Things To Do Section
+
+.footprint-right-section-two {
+  top: -38px;
+  left: 412px;
+}
+
+.footprint-left-section-two {
+  right: 600px;
+  bottom: 165px;
+}
+
+.card-header {
+  background-color: $green;
+  opacity: 0.58;
+  color: white;
+}
+
+.card-body {
+  font-size: 1.125rem;
+  background-color: $green-300;
+}
+
+.bi-calendar3 {
+  font-size: 3em;
+  margin-right: 1rem;
+}
+
+.card-text a {
+  text-decoration-color: $teal;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.5rem;
+  position: relative;
+}
+
+.card-text a:hover::after {
+  content: url(/img/arrow-vector-right-small.svg);
+  margin-left: 1rem;
+  position: absolute;
+  top: 15%;
+}
+
+footer {
+  background-color: $green-500;
+  color: white;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+footer a:hover {
+  text-decoration: underline;
+  text-decoration-color: white;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.5rem;
+}
+
+.footer-logos {
+  display: flex;
+  flex-direction: column;
+}
+
+// Plan Your Visit Section
+
+.how-to-get-here {
+  background-color: #003d2a;
+}
+
+.parking {
+  background-color: #986987;
+}
+
+.accessibility {
+  background-color: #96a3cf;
+}
+
+.dogs {
+  background-color: #7f8954;
+}
+
+.plan-your-visit-cards {
+  .card {
+    .card-title {
+      margin-bottom: 0;
+    }
+
+    img {
+      height: 95px;
+      margin-bottom: 1rem;
+    }
+  }
+}
